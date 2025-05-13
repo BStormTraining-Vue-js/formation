@@ -48,7 +48,7 @@ const addArticle = (article) => {
 const countArticles = computed(() => articles.reduce((p,c) => p + c.quantite,0))
 const totalPrice = computed(() => { 
     let total = articles.reduce((p,c) => p + c.quantite * c.prix, 0);
-    if(countArticles.value > 0) {
+    if(countArticles.value > 10) {
         total *= 0.95;
     }
     return total;
